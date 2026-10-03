@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <meta name="description" content="image editor"/>
+        <link rel="stylesheet" href="/src/styles.css"/>
+        <title>Image Editor</title>
+    </head>
+    <body>
+        <div id="body-wrapper">
+            <div class="title">
+                <h2>Dead Easy Image Editor</h2>
+            </div>
+            <div id="editor-wrapper">
+                <div id="editor">
+                    <div class="filters">
+                        <h3 class="editor-title">Filters</h3>
+                        <div class="range-wrapper">
+                            <label for="brightness">Brightness</label>
+                            <input type="range" data-name="brightness" data-unit="%" id="brightness" name="brightness"
+                                   min="0" max="200"
+                                   value="100"/>
+                        </div>
+
+                        <div class="range-wrapper">
+                            <label for="blur">Blur</label>
+                            <input type="range" data-name="blur" data-unit="px" id="blur" name="blur" min="0" max="10"
+                                   value="0"/>
+                        </div>
+
+                        <div class="range-wrapper">
+                            <label for="contrast">Contrast</label>
+                            <input type="range" data-name="contrast" data-unit="%" id="contrast" name="contrast" min="0"
+                                   max="200"
+                                   value="100"/>
+                        </div>
+
+                        <div class="range-wrapper">
+                            <label for="gray-scale">Grayscale</label>
+                            <input type="range" data-name="grayscale" data-unit="%" id="gray-scale" name="gray-scale"
+                                   min="0"
+                                   max="100"
+                                   value="0"/>
+                        </div>
+
+                        <div class="range-wrapper">
+                            <label for="hue-rotation">Hue Rotation</label>
+                            <input type="range" data-name="hue-rotate" data-unit="deg" id="hue-rotation"
+                                   name="hue-rotation" min="0"
+                                   max="360"
+                                   value="0"/>
+                        </div>
+
+                        <div class="range-wrapper">
+                            <label for="invert">Inversion</label>
+                            <input type="range" data-name="invert" data-unit="%" id="invert" name="invert" min="0"
+                                   max="100"
+                                   value="0"/>
+                        </div>
+
+                        <div class="range-wrapper">
+                            <label for="opacity">Opacity</label>
+                            <input type="range" data-name="opacity" data-unit="%" id="opacity" name="opacity" min="0"
+                                   max="200"
+                                   value="0"/>
+                        </div>
+
+                        <div class="range-wrapper">
+                            <label for="saturate">Saturation</label>
+                            <input type="range" data-name="saturate" data-unit="%" id="saturate" name="saturate" min="0"
+                                   max="400"
+                                   value="100"/>
+                        </div>
+                    </div>
+                    <div class="transformation">
+                        <h3 class="editor-title">Transformations</h3>
+                        <div class="transformation-grid">
+                            <div class="transform-wrapper">
+                                <img src="/horizontal.png" alt="horizontal reflect" class="flip-horizontal">
+                            </div>
+                            <div class="transform-wrapper">
+                                <img src="/reflect.png" alt="vertical reflect" class="flip-vertical">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btn reset-btn">Reset Filters</button>
+                    </div>
+                </div>
+                <div id="preview">
+                    <div id="image-preview">
+                        <img class="editing-image" src="/mona.jpg" alt="placeholder image">
+                    </div>
+
+                    <div class="button-group">
+                        <label for="image-input" class="btn">Upload Image</label>
+                        <input type="file" accept="image/*" id="image-input"/>
+                        <button class="btn save-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
